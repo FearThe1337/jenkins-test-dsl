@@ -17,7 +17,6 @@ job('create_initial_job_setup') {
     steps {
         dsl {
             ignoreExisting(false)
-            removeAction('DISABLE')
             lookupStrategy('JENKINS_ROOT')
             removeAction('DELETE')
             removeViewAction('DELETE')
