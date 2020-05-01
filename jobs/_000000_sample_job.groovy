@@ -3,12 +3,8 @@ multibranchPipelineJob('multibranch-test') {
         git {
             // id has to be unique, so random uuid?
             id('481be7f2-933a-4456-a9ca-b5ba4d147eef')
-            remote{
-                url('https://github.com/jenkinsci/job-dsl-plugin.git')
-                credentials('git-key')
-            }
-            credentials
-            // credentialsId('id')
+            remote('https://github.com/jenkinsci/job-dsl-plugin.git')
+            credentialsId('git-key')
             includes('*')
         }
     }
