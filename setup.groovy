@@ -6,6 +6,7 @@ job('setup-projects') {
             remote {
                 name('origin')
                 url('git@github.com:FearThe1337/jenkins-test-dsl.git')
+                credentials('git-key')
             }
             extensions {
                 cleanAfterCheckout()
