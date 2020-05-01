@@ -15,12 +15,12 @@ job('setup-projects') {
     }
     steps {
         dsl {
-            ignoreExisting(false);
+            ignoreExisting(false)
             removeAction('DISABLE')
             lookupStrategy('JENKINS_ROOT')
             removeAction('DELETE')
             removeViewAction('DELETE')
-            external('setup-projects.groovy')
+            external('setup_projects.groovy')
         }
     }
 }

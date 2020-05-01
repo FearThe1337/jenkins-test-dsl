@@ -4,6 +4,6 @@ job('001-setup-jenkins-job') {
         removeAction('DISABLE')
         removeViewAction('DELETE')
         lookupStrategy('JENKINS_ROOT')
-        external('000000-sample-job.groovy')
+        external('_000000_sample_job.groovy')
     }
 }
