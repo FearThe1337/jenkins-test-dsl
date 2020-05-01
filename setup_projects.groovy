@@ -1,4 +1,4 @@
-job('001-setup-jenkins-job') {
+job('create_jobs') {
     steps {
         dsl {
             additionalClasspath('jobs')

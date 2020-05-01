@@ -1,6 +1,7 @@
 // Initial job for jenkins, most likely needs to be copy-pasted
+// Sets up a job, 'setup-projects' which should create all other projects.
 
-job('setup-projects') {
+job('create_initial_job_setup') {
     scm {
         git {
             remote {
@@ -21,6 +22,9 @@ job('setup-projects') {
             removeAction('DELETE')
             removeViewAction('DELETE')
             external('setup_projects.groovy')
+        }
+        downstreamParameterized {
+            trigger('create_jobs')
         }
     }
 }
