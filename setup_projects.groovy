@@ -1,4 +1,16 @@
 job('create_jobs') {
+    scm {
+        git {
+            remote {
+                name('origin')
+                url('git@github.com:FearThe1337/jenkins-test-dsl.git')
+                credentials('git-key')
+            }
+            extensions {
+                cleanAfterCheckout()
+            }
+        }
+    }
     steps {
         dsl {
             additionalClasspath('jobs')
